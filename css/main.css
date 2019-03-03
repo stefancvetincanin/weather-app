@@ -1,0 +1,125 @@
+html, body {
+    height: 100%;
+}
+
+.main-container {
+    height: 100%;
+}
+
+.weather {
+    height: 55%;
+    background-color: #8a9fa8;
+    color: white;
+    position: relative;
+}
+
+.weather-menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.weather-menu > input {
+    color: white;
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 60%;
+    font-weight: 300;
+}
+
+.weather-menu > input::placeholder {
+    color: rgb(235, 235, 235);
+    font-size: 14px;
+}
+
+.weather-location {
+    padding: 15px;
+    display: flex;
+}
+
+.wl-left {
+    flex-basis: 70%;
+}
+
+.wl-right {
+    flex-basis: 30%;
+}
+
+.weather h1 {
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.weather p {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+#weather-cond {
+    font-size: 1rem;
+    /* font-weight: 400; */
+}
+
+.weather h2 {
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.weather h2, .weather h3 {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.weather h3 sup {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.temp-holder {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.info {
+    height: 35%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    flex-basis: 50%;
+    padding: 15px 20px;
+    display: flex;
+}
+
+.info-item p {
+    font-size: 16px;
+    color: rgb(163, 157, 157);
+    font-weight: 300;
+}
+
+.info-item h5, .info-item h6 {
+    display: inline-block;
+}
+
+.info-icon {
+    flex-basis: 37%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-icon i {
+    font-size: 2.2em;
+}
+
+.info-text {
+    flex-basis: 63%;
+}
+
+.nav {
+    height: 10%;
+    background-color: #e7e7e8;
+}

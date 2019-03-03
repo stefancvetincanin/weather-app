@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery -->
+    <script src="bootstrap/jquery-3.3.1.min.js"></script>
+    <!-- Popper -->
+    <script src="bootstrap/popper.min.js"></script>
+    <!-- BOOTSTRAP .css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/bootstrap.min.css" />
+    <!-- BOOTSTRAP .js -->
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <!-- Our sources -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="main-container">
+        <section class="weather">
+            <div class="weather-menu">
+                <img src="media/images/burger-menu-2.svg" alt="Menu" width="25" id="weather-burger">
+                <input type="text" placeholder="Location..." id="search">
+                <img src="media/images/search-menu.svg" alt="Search" width="22" id="weather-search">
+                <!-- KORISTI FONT AWESOME ZA IKONICE -->
+            </div>
+            <div class="weather-location">
+                <div class="wl-left">
+                    <h1 id="location-name"></h1>
+                    <p id="date">&nbsp;</p>
+                    <p id="weather-cond"></p>
+                </div>
+                <div class="wl-right" id="wl-right">
+                    
+                </div>
+            </div>
+            <div class="temp-holder">
+                <!-- <h2 id="temperature"></h2><h2>&#176;</h2><h3><sup>C</sup></h3> -->
+                <h2 id="temperature"></h2>
+            </div>
+        </section>
+        <section class="info">
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-thermometer-half"></i>
+                </div>
+                <div class="info-text">
+                    <p>Maximum:</p>
+                    <h5 id="max-temp"></h5>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <div class="info-text">
+                    <p>Humidity:</p>
+                    <h5 id="humidity"></h5>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="fas fa-wind"></i>
+                </div>
+                <div class="info-text">
+                    <p>Wind:</p>
+                    <h5 id="wind"></h5>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon">
+                    <i class="far fa-clock"></i>
+                </div>
+                <div class="info-text">
+                    <p>Pressure:</p>
+                    <h5 id="pressure"></h5>
+                </div>
+            </div>
+        </section>
+        <section class="nav">
+
+        </section>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
