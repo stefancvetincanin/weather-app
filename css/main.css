@@ -20,6 +20,7 @@ body {
     background-color: #8a9fa8;
     color: white;
     position: relative;
+    min-height: 260px;
 }
 
 .weather-menu {
@@ -95,6 +96,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color: white;
+    min-height: 200px;
 }
 
 .info-item {
@@ -132,6 +134,7 @@ body {
 .nav {
     height: 10%;
     background-color: #e7e7e8;
+    min-height: 55px;
 }
 
 @media screen and (min-height: 850px) {
