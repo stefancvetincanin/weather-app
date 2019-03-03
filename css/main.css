@@ -1,5 +1,14 @@
-html, body {
+html, body, main {
     height: 100%;
+}
+
+main {
+    max-width: 430px;
+    margin: auto;
+}
+
+body {
+    background-color: skyblue;
 }
 
 .main-container {
@@ -85,6 +94,7 @@ html, body {
     height: 40%;
     display: flex;
     flex-wrap: wrap;
+    background-color: white;
 }
 
 .info-item {
@@ -122,4 +132,10 @@ html, body {
 .nav {
     height: 10%;
     background-color: #e7e7e8;
+}
+
+@media screen and (min-height: 850px) {
+    main {
+        height: 820px;
+    }
 }
