@@ -1,3 +1,7 @@
+* {
+    font-family: "Roboto";
+}
+
 html, body, main {
     height: 100%;
 }
@@ -5,6 +9,7 @@ html, body, main {
 main {
     max-width: 430px;
     margin: auto;
+    position: relative;
 }
 
 body {
@@ -15,9 +20,13 @@ body {
     height: 100%;
 }
 
+form {
+    position: relative;
+}
+
 .weather {
     height: 50%;
-    background-color: #8a9fa8;
+    background-color: #293551;
     color: white;
     position: relative;
     min-height: 260px;
@@ -40,6 +49,17 @@ body {
 .weather-menu > input::placeholder {
     color: rgb(235, 235, 235);
     font-size: 14px;
+}
+
+input[type=submit] {
+    width: 22px;
+    height: 22px;
+    margin-top: 13px;
+    background-color: white;
+    background: url("../media/images/search-menu.svg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
 }
 
 .weather-location {
@@ -99,9 +119,10 @@ body {
     min-height: 200px;
 }
 
+
 .info-item {
     flex-basis: 50%;
-    padding: 15px 20px;
+    padding: 15px 15px;
     display: flex;
 }
 
@@ -113,28 +134,131 @@ body {
 
 .info-item h5, .info-item h6 {
     display: inline-block;
+    color: #293551;
 }
 
 .info-icon {
     flex-basis: 37%;
     text-align: center;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 
 .info-icon i {
+    margin-top: 36px;
     font-size: 2em;
+    color: #293551;
 }
 
 .info-text {
     flex-basis: 63%;
 }
 
+.info-weekly {
+    background-color: white;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 40%;
+}
+
+.weekly-row {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.weekly-row > div {
+    padding: 15px;
+    color: rgb(184, 178, 178);
+}
+
+.weekly-row > .weekly-temp {
+    color: #293551;
+    flex-basis: 20%;
+}
+
 .nav {
     height: 10%;
     background-color: #e7e7e8;
     min-height: 55px;
+    display: flex;
+    align-content: center;
+    color: #293551;
+}
+
+.nav p {
+    margin: 5px 0 0;
+    font-size: 12px;
+}
+
+.nav > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-active {
+    background-color: #d3d3df;
+}
+
+.nav > div {
+    cursor: pointer;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.nav i {
+    font-size: 1.2em;
+}
+
+.invisible {
+    display: none;
+}
+
+#weather-burger {
+    cursor: pointer;
+}
+
+#burger-menu {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 48px;
+    width: 100%;
+    z-index: 3;
+}
+
+.burger-item {
+    background-color: rgba(211, 211, 223, 0.95);
+    color: #293551;
+    width: 100%;
+    padding: 8px 15px;
+    border-bottom: 1px solid #293551;
+    cursor: pointer;
+}
+
+.burger-item:hover {
+    background-color: rgb(197, 197, 209);
+}
+
+.burger-item:last-of-type {
+    border: none;
+}
+
+#mask {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(153, 142, 142, 0.5);
+    z-index: 2;
+    position: absolute;
+}
+
+small {
+    font-size: 0.7em;
 }
 
 @media screen and (min-height: 850px) {

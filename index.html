@@ -16,6 +16,8 @@
     <script src="bootstrap/bootstrap.min.js"></script>
     <!-- Our sources -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -24,13 +26,24 @@
 <body>
     <main>
         <div class="main-container">
+            <div id="burger-menu">
+                <div class="burger-item" id="moscow">Moscow</div>
+                <div class="burger-item" id="london">London</div>
+                <div class="burger-item" id="rome">Rome</div>
+                <div class="burger-item" id="paris">Paris</div>
+                <div class="burger-item" id="berlin">Berlin</div>
+            </div>
+            <div id="mask"></div>
             <section class="weather">
-                <div class="weather-menu">
-                    <img src="media/images/burger-menu-2.svg" alt="Menu" width="25" id="weather-burger">
-                    <input type="text" placeholder="Location..." id="search">
-                    <img src="media/images/search-menu.svg" alt="Search" width="22" id="weather-search">
-                    <!-- KORISTI FONT AWESOME ZA IKONICE -->
-                </div>
+                <form id="form-weather">
+                    <div class="weather-menu">
+                        <img src="media/images/burger-menu-2.svg" alt="Menu" width="25" id="weather-burger">
+                        <input type="text" placeholder="Location..." id="search" required>
+                        <!-- <img src="media/images/search-menu.svg" alt="Search" width="22" id="weather-search"> -->
+                        <input type="submit" value="">
+                        <!-- KORISTI FONT AWESOME ZA IKONICE -->
+                    </div>
+                </form>
                 <div class="weather-location">
                     <div class="wl-left">
                         <h1 id="location-name"></h1>
@@ -46,7 +59,7 @@
                     <h2 id="temperature"></h2>
                 </div>
             </section>
-            <section class="info">
+            <section class="info" id="info-today">
                 <div class="info-item">
                     <div class="info-icon">
                         <i class="fas fa-thermometer-half"></i>
@@ -84,8 +97,18 @@
                     </div>
                 </div>
             </section>
+            <section id="info-weekly" class="invisible info-weekly">
+                
+            </section>
             <section class="nav">
-
+                <div id="today" class="nav-active">
+                    <i class="fas fa-calendar-day"></i>
+                    <p>Today</p>
+                </div>
+                <div id="weekly">
+                    <i class="fas fa-calendar-alt"></i>
+                    <p>Weekly</p>
+                </div>
             </section>
         </div>
     </main>
